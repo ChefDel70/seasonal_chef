@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  state_id: 1
+  ingredient_id: 1
+  in_season_begin_date: 2017-11-08 18:29:39
+  in_season_end_date: 2017-11-08 18:29:39
+
+two:
+  state_id: 1
+  ingredient_id: 1
+  in_season_begin_date: 2017-11-08 18:29:39
+  in_season_end_date: 2017-11-08 18:29:39
