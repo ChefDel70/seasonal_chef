@@ -1,3 +1,66 @@
-// Place all the styles related to the ingredient_states controller here.
+// Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+////////////BODY///////////
+
+body {
+  height: auto;
+  width: auto;
+  background-image: url("http://www.themebin.com/wp-content/uploads/hd-wallpapers/1920x1080/fall_colors_1080p.jpg");
+}
+
+//////////HEADER//////////
+
+.navbar-brand-top {
+  font-size: 28pt;
+  font-family: 'Lobster', cursive !important;
+}
+
+nav.navbar.fixed-top.navbar-light.bg-light {
+    justify-content: center;
+    background-color: #000000!important;
+    color: white;
+}
+
+//////////WELCOME//////////
+
+.container-welcome {
+    font-size: 24pt;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+}
+
+//////////DROPDOWN//////////
+
+.container-dropdown {
+    font-size: 18pt;
+    position: absolute;
+    left: 0;
+    top: 60%;
+    width: 100%;
+    text-align: center;
+}
+
+select {
+    background-color: #FFFFFF;
+    overflow: scroll;
+}
+
+//////////FOOTER//////////
+
+.navbar-brand-bottom {
+  font-size: 14pt;
+  font-family: 'Lobster', cursive !important;
+}
+
+nav.navbar.fixed-bottom.navbar-light.bg-light {
+    justify-content: space-around;
+    background-color: #000000!important;
+    color: white;
+}
