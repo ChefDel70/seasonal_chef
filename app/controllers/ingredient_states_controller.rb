@@ -15,4 +15,13 @@ class IngredientStatesController < ApplicationController
 		all_matches = self.ingredients
 		all_matches
 	end 
+
+    def recipes
+    	ingredient = params[:ingredient]
+    	@recipes = RecipePuppy::Recipe.search_for(ingredient).get['results']
+    	render json: @recipes  
+    end 
+
+    def search
+    end
 end
