@@ -24,4 +24,6 @@ class IngredientStatesController < ApplicationController
 
     def search
     end
+
+    
 end
