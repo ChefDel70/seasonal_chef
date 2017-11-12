@@ -1,8 +1,13 @@
 class RecipesController < ApplicationController
 
 	def index
+<<<<<<< HEAD
 		@states = State.all
 	end
+=======
+		@states = State.all 
+	end 
+>>>>>>> master
 
 	def ingredients
 		@state = State.find(params[:state_id])
@@ -14,10 +19,19 @@ class RecipesController < ApplicationController
     	ingredients = params[:ingredients]
     	first_ingredient = ingredients[0]
     	other_ingredients = ingredients.last(ingredients.length - 1).join(", ")
+<<<<<<< HEAD
     	if params[:ingredients].length == 1
     	    @recipes = RecipePuppy::Recipe.search_for(first_ingredient).get['results']
 		else
 			@recipes = RecipePuppy::Recipe.search_for(first_ingredient).with_ingredients(other_ingredients).get['results']
     	end
     end
+=======
+    	if params[:ingredients].length == 1 
+    	    @recipes = RecipePuppy::Recipe.search_for(first_ingredient).get['results']
+		else 
+			@recipes = RecipePuppy::Recipe.search_for(first_ingredient).with_ingredients(other_ingredients).get['results']
+    	end 
+    end    
+>>>>>>> master
 end

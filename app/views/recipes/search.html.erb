@@ -1,0 +1,5 @@
+<%= form_tag(controller: "ingredient_states" , action: "recipes", method: "get") do %>
+<%= label_tag(:ingredient, "ingredient") %>
+<%= radio_button_tag(:ingredient, params[:ingredient]) %>
+<%= button_tag("Search...") %>
+<% end %>
