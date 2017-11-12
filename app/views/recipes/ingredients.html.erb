@@ -1,0 +1,10 @@
+<h1><%= @state.name %></h1>
+<%= form_tag("/recipes", method: :get) do %>
+<% @ingredients.each do |local| %>
+	<div>
+	<%= check_box_tag("ingredients[]", local.name)%> <%= label_tag local.name %>
+	</div>
+ <% end %>
+ 	<%= submit_tag('submit') %>
+<% end %>
+

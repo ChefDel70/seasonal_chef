@@ -1,3 +1,10 @@
+<div>
+	<% if @recipes.length == 0 %>
+	<div>
+		Sorry... :(
+	</div>
+	<% end %>
+</div>
 <% @recipes.each do |recipe| %>
   <%= recipe['title'] %>
   <%= link_to recipe["title"], recipe['href'], target: "_blank" %>
