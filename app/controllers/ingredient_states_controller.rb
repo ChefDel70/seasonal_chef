@@ -17,13 +17,16 @@ class IngredientStatesController < ApplicationController
 	end 
 
     def recipes
-    	ingredient = params[:ingredient]
+    	ingredient = params[:ingredients].join(", ")
     	@recipes = RecipePuppy::Recipe.search_for(ingredient).get['results']
-    	render json: @recipes  
     end 
 
     def search
     end
 
-    
+	def local_ingredients
+		@local_ingredients = Ingredient.all
+	end    
+
+
 end

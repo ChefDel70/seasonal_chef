@@ -1,0 +1,8 @@
+<%= form_tag("/recipes", method: :get) do %>
+<%= @local_ingredients.each do |local| %>
+	<%= local.name %>
+	<%= check_box_tag("ingredients[]", local.name)%>
+ <% end %>
+ 	<%= submit_tag('submit') %>
+<% end %>
+

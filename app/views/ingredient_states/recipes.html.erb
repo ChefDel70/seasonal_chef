@@ -1,0 +1,7 @@
+<% @recipes.each do |recipe| %>
+  <%= recipe['title'] %>
+  <%= link_to recipe["title"], recipe['href'], target: "_blank" %>
+  <%= recipe['ingredients'] %>
+  <%= image_tag recipe['thumbnail'] %>
+  <hr>
+<% end %> 
