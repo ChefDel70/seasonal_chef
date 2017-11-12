@@ -1,21 +1,21 @@
-    <div class="container" >
-      <div class="container-header" >
-        <nav class="navbar fixed-top navbar-light bg-light">
-          <a class="navbar-brand-top">The Seasonal Chef</a>
-        </nav>
-      </div>
-      <div class="container-welcome" >
-        <p>Welcome!<br>Would you like to know what local ingredients are in season?</p>
-      </div>
-      <div class="container-dropdown" >
-        <%= form_tag("/ingredients", method: "get") do %>
-          <%= select_tag(:state_id, options_for_select(@states.sort.map{|state| [state.name, state.id]})) %>
-          <%= submit_tag "Find your State" %>
-        <% end %>
-      </div>
-      <div class="container-footer" >
-        <nav class="navbar fixed-bottom navbar-light bg-light">
-          <a class="navbar-brand-bottom">All Rights Reserved</a>
-        </nav>
-      </div>
-    </div>
+<div class="container" >
+  <div class="container-header" >
+   <nav class="navbar fixed-top navbar-light bg-light">
+     <a class="navbar-brand-top">The Seasonal Chef</a>
+   </nav>
+  </div>
+  <div class="container-welcome" >
+   <p>Welcome!<br>Would you like to know what local ingredients are in season?</p>
+  </div>
+  <div class="container-dropdown" >
+   <%= form_tag("/ingredients", method: "get") do %>
+     <%= select_tag(:state_id, options_for_select(@states.sort.map{|state| [state.name, state.id]}), onfocus: 'this.size=5;', onblur:'this.size=1;', onchange:'this.size=1; this.blur();') %>
+     <%= submit_tag "Find Your State" %>
+   <% end %>
+  </div>
+  <div class="container-footer" >
+   <nav class="navbar fixed-bottom navbar-light bg-light">
+     <a class="navbar-brand-bottom">All Rights Reserved</a>
+   </nav>
+  </div>
+</div>

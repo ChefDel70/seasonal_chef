@@ -1,10 +1,21 @@
-<h1><%= @state.name %></h1>
-<%= form_tag("/recipes", method: :get) do %>
-<% @ingredients.each do |local| %>
-	<div>
-	<%= check_box_tag("ingredients[]", local.name)%> <%= label_tag local.name %>
-	</div>
- <% end %>
- 	<%= submit_tag('submit') %>
-<% end %>
-
+<div class="container" >
+  <div class="container-header" >
+    <nav class="navbar fixed-top navbar-light bg-light">
+      <a class="navbar-brand-top">The Seasonal Chef</a>
+    </nav>
+  </div>
+  <div class="flex-grid-single">
+    <div id="col">Please Select Up To Five (5) Ingredients</div>
+  </div>
+  <div class="grids-one">
+    <%= form_tag("/recipes", method: :get) do %>
+    <% @ingredients.each do |local| %>
+    	<div class="flex-container">
+        <%= label_tag local.name, nil, class: "flex-item" %>
+        <%= check_box_tag("ingredients[]", local.name, false, class: "flex-item")%>
+    	</div>
+     <% end %>
+     	<%= submit_tag('Submit', class: "btn btn-primary btn-lg") %>
+    <% end %>
+  </div>
+</div>
