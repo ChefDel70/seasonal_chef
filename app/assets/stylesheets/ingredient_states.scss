@@ -247,7 +247,7 @@
   //////////WELCOME//////////
 
   .container-welcome {
-      font-size: 65pt;
+      font-size: 75pt;
       font-family: 'Lobster', cursive !important;
       color: white;
       position: absolute;
@@ -847,7 +847,7 @@
   //////////GRIDS//////////
 
   .grids-one {
-    padding-top: 110px;
+    padding-top: 130px;
     padding-bottom: 80px;
   }
 
@@ -879,6 +879,7 @@
     justify-content: space-around;
     font-size: 38pt!important;
     font-weight: bold;
+    padding-bottom: 10px;
   }
 
   .flex-grid-single .col {
@@ -1128,7 +1129,7 @@
     background: white;
     width: 350px;
     height: 75px;
-    line-height: 50px;
+    line-height: 75px;
     color: black;
     font-weight: bold;
     font-size: 24pt;
@@ -1136,7 +1137,7 @@
   }
 
   img {
-      height: 50px!important;
+      height: 75px!important;
   }
 
   // .flex-grid-thirds-one-one {
@@ -1252,6 +1253,7 @@
     justify-content: space-around;
     color: white;
     font-size: 30pt;
+    padding: 20px;
   }
 
   //////////FOOTER//////////
@@ -1477,7 +1479,7 @@
   .button {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    padding: 40px;
     color: white;
   }
 
@@ -1584,28 +1586,26 @@
 
   .flex-item-one {
       background: white;
-      width: 55px;
-      height: 50px;
-      line-height: 50px;
+      width: 75px;
+      height: 55px;
+      line-height: 55px;
       color: black;
       font-weight: bold;
-      font-size: 12pt;
       text-align: center;
       flex-shrink: 1;
   }
 
   img {
-      height: 50%;
+      height: 45px !important;
   }
 
   .flex-item-two {
     background: white;
-    width: 350px;
-    height: 50px;
-    line-height: 50px;
+    height: 55px;
+    line-height: 55px;
     color: black;
     font-weight: bold;
-    font-size: 12pt;
+    font-size: 10pt;
     text-align: center;
     flex-grow: 2;
   }
@@ -1716,13 +1716,6 @@
 
   .flex-grid-thirds-nine .col {
     width: 32%;
-  }
-
-  .button {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    color: white;
   }
 
   //////////FOOTER//////////
@@ -1958,13 +1951,6 @@
 //     width: 32%;
 //   }
 //
-//   .button {
-//     display: flex;
-//     justify-content: space-around;
-//     padding: 20px;
-//     color: white;
-//   }
-//
 //   //////////FOOTER//////////
 //
 //   .navbar-brand-bottom {
@@ -2063,9 +2049,9 @@
 
   .flex-item-one {
       background: white;
-      width: 55px;
-      height: 50px;
-      line-height: 50px;
+      width: 155px;
+      height: 85px;
+      line-height: 85px;
       color: black;
       font-weight: bold;
       font-size: 12pt;
@@ -2074,14 +2060,13 @@
   }
 
   img {
-      height: 75%!important;
+      height: 75px !important;
   }
 
   .flex-item-two {
     background: white;
-    width: 350px;
-    height: 50px;
-    line-height: 50px;
+    height: 85px;
+    line-height: 85px;
     color: black;
     font-weight: bold;
     font-size: 24pt;
@@ -2195,13 +2180,6 @@
 
   .flex-grid-thirds-nine .col {
     width: 32%;
-  }
-
-  .button {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    color: white;
   }
 
   //////////FOOTER//////////
@@ -2302,9 +2280,9 @@
 
   .flex-item-one {
       background: white;
-      width: 55px;
-      height: 50px;
-      line-height: 50px;
+      width: 155px;
+      height: 85px;
+      line-height: 85px;
       color: black;
       font-weight: bold;
       font-size: 12pt;
@@ -2313,14 +2291,13 @@
   }
 
   img {
-      height: 75%!important;
+      height: 75px !important;
   }
 
   .flex-item-two {
     background: white;
-    width: 350px;
-    height: 50px;
-    line-height: 50px;
+    height: 85px;
+    line-height: 85px;
     color: black;
     font-weight: bold;
     font-size: 24pt;
@@ -2434,13 +2411,6 @@
 
   .flex-grid-thirds-nine .col {
     width: 32%;
-  }
-
-  .button {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    color: white;
   }
 
   //////////FOOTER//////////
@@ -2674,13 +2644,6 @@
 
   .flex-grid-thirds-nine .col {
     width: 32%;
-  }
-
-  .button {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    color: white;
   }
 
   //////////FOOTER//////////
