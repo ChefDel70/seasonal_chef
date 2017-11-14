@@ -6,8 +6,11 @@ class RecipesController < ApplicationController
 
 	def ingredients
 		@state = State.find(params[:state_id])
-		@ingredients = @state.ingredients
-
+		@ingredients = @state.ingredients.where(
+			ingredient_states: {
+				in_season_week: Time.now.strftime("%U").to_i
+			}
+		).joins(:ingredient_states).distinct
 	end
 
     def recipes
