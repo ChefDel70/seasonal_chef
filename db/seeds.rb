@@ -1,6 +1,3 @@
-require "httparty"
-require "nokogiri"
-
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -9,122 +6,228 @@ require "nokogiri"
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-states = [
-  "Alabama",
-  "Alaska",
-  "Arizona",
-  "Arkansas",
-  "California",
-  "Colorado",
-  "Connecticut",
-  "Delaware",
-  "Florida",
-  "Georgia",
-  "Hawaii",
-  "Idaho",
-  "Illinois",
-  "Indiana",
-  "Iowa",
-  "Kansas",
-  "Kentucky",
-  "Louisiana",
-  "Maine",
-  "Maryland",
-  "Massachusetts",
-  "Michigan",
-  "Minnesota",
-  "Mississippi",
-  "Missouri",
-  "Montana",
-  "Nebraska",
-  "Nevada",
-  "New Hampshire",
-  "New Jersey",
-  "New Mexico",
-  "New York",
-  "North Carolina",
-  "North Dakota",
-  "Ohio",
-  "Oklahoma",
-  "Oregon",
-  "Pennsylvania",
-  "Rhode Island",
-  "South Carolina",
-  "South Dakota",
-  "Tennessee",
-  "Texas",
-  "Utah",
-  "Vermont",
-  "Virginia",
-  "Washington",
-  "West Virginia",
-  "Wisconsin",
-  "Wyoming"
-]
+require 'json'
 
-states.each do |state|
-  State.create(name: state)
-end
+file = File.read(File.join(Rails.root, 'db/data.json'))
+data = JSON.parse(file)
 
 ingredients = [
+  "apples",
+  "apricots",
   "asian pears",
   "asparagus",
+  "avocados",
   "beans",
+  "beets",
+  "bell pepper",
   "blackberries",
   "blueberries",
+  "bok choy",
   "broccoli",
+  "brussel sprouts",
   "cabbage",
   "cantaloupes",
+  "carambola",
+  "carrots",
+  "cauliflower",
+  "celery",
   "cherries",
+  "corn",
   "cucumbers",
+  "currants",
   "eggplant",
+  "fennel",
+  "grapefruits",
+  "grapes",
   "greens",
+  "guava",
+  "halibut",
   "herbs",
+  "honey",
+  "kale",
+  "lettuce",
+  "lima beans",
+  "longan",
+  "lychee",
+  "mango",
+  "mushrooms",
   "nectarines",
+  "okra",
+  "onion",
+  "oranges",
+  "oysters",
+  "papaya",
+  "passion fruit",
   "peaches",
+  "pears",
+  "peanut",
   "peas",
+  "pecans",
   "peppers",
+  "pistachios",
   "plums",
+  "pollock",
   "potatoes",
+  "pumpkins",
+  "radishes",
   "raspberries",
   "rhubarb",
-  "pumpkins",
+  "rutabaga",
+  "scallion",
+  "shrimp",
+  "snap bean",
+  "spinach",
   "squash",
   "strawberries",
   "sweet corn",
   "sweet potatoes",
+  "tangerines",
   "tomatoes",
-  "watermelons"
+  "turkey-bourbon red",
+  "turkey-midget white",
+  "turkey-standard bronze",
+  "turnips",
+  "watermelons",
+  "zucchini",
 ]
 
-# set up seasons for ingredients
+# def get_weeks_from_period(time_period)
+# 	# time_period (string), that maps to a early or late period of a month
+# 	# returns an array of integers that converts the time_period to series
+# 	# of week numbers in a 52-week year.
+#
+# 	# data source:
+# 	# http://www.simplesteps.org/eat-local/state/
+#
+# 	case time_period
+# 	when "January, Early"
+# 		return [1, 2]
+# 	when "January, Late"
+# 		return [3, 4]
+# 	when "February, Early"
+# 		return [5, 6]
+# 	when "February, Late"
+# 		return [7, 8]
+# 	when "March, Early"
+# 		return [9, 10]
+# 	when "March, Late"
+# 		return [11, 12, 13]
+# 	when "April, Early"
+# 		return [14, 15]
+# 	when "April, Late"
+# 		return [16, 17]
+# 	when "May, Early"
+# 		return [18, 19]
+# 	when "May, Late"
+# 		return [20, 21]
+# 	when "June, Early"
+# 		return [22, 23]
+# 	when "June, Late"
+# 		return [24, 25, 26]
+# 	when "July, Early"
+# 		return [27, 28]
+# 	when "July, Late"
+# 		return [29, 30]
+# 	when "August, Early"
+# 		return [31, 32]
+# 	when "August, Late"
+# 		return [33, 34]
+# 	when "September, Early"
+# 		return [35, 36]
+# 	when "September, Late"
+# 		return [37, 38, 39]
+# 	when "October, Early"
+# 		return [40, 41]
+# 	when "October, Late"
+# 		return [42, 43]
+# 	when "November, Early"
+# 		return [44, 45]
+# 	when "November, Late"
+# 		return [46, 47, 48]
+# 	when "December, Early"
+# 		return [49, 50]
+# 	when "December, Late"
+# 		return [51, 52]
+# 	end
+# end
+
 ingredients.each do |ingredient|
   Ingredient.create(name: ingredient)
 end
 
-url = "http://www.simplesteps.org/eat-local/state/florida"
-response = HTTParty.get url
-
-weeks_for_tp = {
-  "EARLY JANUARY" => [1, 2],
-  "LATE JANUARY" => [3, 4],
-  "EARLY FEBRUARY" => [5, 6],
-  "LATE FEBRUARY" => [7, 8],
-  "EARLY MARCH" => [9, 10],
-  "LATE MARCH" => [11, 12]
-}
-
-dom = Nokogiri::HTML(response.body)
-@info = dom.css('.state-produce').map do |a|
-  p "#{a.text}"
+def paths_in_data(data, parent)
+    unless [Hash, Array].map{|class_| data.class == class_ }.any?
+        return [parent]
+    else
+        items = []
+        if data.class == Hash
+          data.map do |k, v|
+              items.push(paths_in_data(v, parent + [k, ]))
+          end
+        else
+          data.map do |v|
+              items.push(paths_in_data(v, parent + [data.index(v), ]))
+          end
+        end
+    end
+    return items.reduce(:+)
 end
 
-# directions for scraping and seeeding
-# ------------------------------------
-# grab each "season" using '.season' selector
-# grab time period (ex: EARLY JANUARY) using h3 selector on the .season div
-# then look at its ingredients
-# compare its ingredients in here: https://imgur.com/s34yDxF to ingredients array
-# if each ingredient is in the array, then find that ingredient via .find
-# now create a ingredient_state for the said ingredient (& state) for each of the weeks_for_tp values associated with its key
-# you're done
+def get(path, obj)
+  path.reduce(obj) { |obj, key| (obj && obj[key]) ? obj[key] : null }
+end
+
+lookup =  Hash[[
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+].product(['Early', 'Late']).map.with_index do |key, index|
+  month, period = key
+  [[period, month], index + 1]
+end]
+
+munged_data.slice(0, 2).each do |state|
+  paths_in_data(state, []).each do |path|
+    state_name, period_month, info_index = path
+    # state = State.find_or_create_by(name: state_name)
+    # ingredient_chk = Ingredient.find_or_create_by(name: ingredient.downcase)
+    #
+    # week_add = In_season_week.find_or_create_by(in_season_week: get_weeks_from_period)
+    p [state_name, get(path, state), lookup[period_month]]
+  end
+end
+
+# create_table "ingredient_states", force: :cascade do |t|
+#   t.integer "state_id"
+#   t.integer "ingredient_id"
+#   t.datetime "created_at", null: false
+#   t.datetime "updated_at", null: false
+#   t.integer "in_season_week"
+# end
+#
+# create_table "ingredients", force: :cascade do |t|
+#   t.string "name"
+#   t.datetime "created_at", null: false
+#   t.datetime "updated_at", null: false
+# end
+
+# data.each do |state|
+#   state.each do |state_name, value|
+#       state = State.create(name: state_name)
+#       value.each do |collection|
+#         collection.each do |k, v|
+#           puts "xxx: #{k}"
+#           puts lookup.fetch(k, 'nothing')
+#         end
+#       end
+#     end
+# end
