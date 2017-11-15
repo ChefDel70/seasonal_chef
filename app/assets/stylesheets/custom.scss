@@ -487,7 +487,7 @@
     display: flex;
     justify-content: space-around;
     padding-top: 75px!important;
-    font-size: 38pt!important;
+    font-size: 42pt!important;
     font-weight: bold;
   }
 
@@ -496,13 +496,13 @@
   }
 
   label.flex-item-one-ingredients {
-    width: 500px;
+    width: 425px;
     height: 50px;
     line-height: 50px;
     color: white!important;
     font-weight: bold;
-    font-size: 28pt;
-    text-align: center;
+    font-size: 32pt;
+    text-align: right;
     flex-grow: 4;
     flex-wrap: wrap;
     text-transform: capitalize;
@@ -528,7 +528,7 @@
     display: flex;
     justify-content: space-around;
     // padding-top: 7px;
-    padding-bottom: 55px;
+    padding-bottom: 15px;
     font-family: 'Lobster', cursive !important;
   }
 
@@ -943,7 +943,7 @@
   //////////GRIDS//////////
 
   .grids-one-recipes {
-    padding-top: 90px;
+    padding-top: 70px;
     // padding-bottom: 60px;
     text-align: center;
   }
@@ -953,8 +953,8 @@
     color: white;
     text-align: center;
     vertical-align: middle;
-    font-size: 28pt;
-    padding-top: 125px;
+    font-size: 42pt;
+    padding-top: 100px;
   }
 
   .flex-container-recipes-one {
@@ -972,11 +972,16 @@
     color: white;
     font-weight: bold;
     font-size: 24pt;
-    text-align: center;
+    text-align: left;
     flex-grow: 4;
     font-family: 'Lobster', cursive !important;
     text-transform: capitalize!important;
-    vertical-align: middle;
+    position: absolute;
+    top: 3%;
+  }
+
+  .col-sm-8.col-lg-6.recipe-name.mt-2 {
+    text-align: left;
   }
 
   .col-sm-4.recipe-image img {
@@ -1155,20 +1160,33 @@
 
   img.flex-item-one-recipes {
     color: white!important;
-    // flex-grow: 2;
+    flex-grow: 2;
     font-family: 'Lobster', cursive !important;
     vertical-align: middle!important;
+  }
+
+  .col-sm-4.col-lg-6.recipe-image.mt-2.mb-2 {
+      text-align: right;
+  }
+
+  .flex-container-recipes-two.mt-4.mb-4.row {
+    padding-right: 225px;
   }
 
   a.flex-item-two-recipes {
     color: white;
     font-weight: bold;
-    font-size: 34pt;
-    text-align: center;
-    // flex-grow: 4;
+    font-size: 24pt;
+    text-align: left;
+    flex-grow: 4;
     font-family: 'Lobster', cursive !important;
     text-transform: capitalize!important;
-    vertical-align: middle;
+    position: absolute;
+    top: 15%;
+  }
+
+  .col-sm-8.col-lg-6.recipe-name.mt-2 {
+    text-align: left;
   }
 
   .col-sm-4.recipe-image img {
