@@ -11,7 +11,7 @@
   <% @ingredients.uniq.each do |local| %>
   	<div class="flex-container-ingredients">
       <%= label_tag local.name.capitalize, nil, class: "flex-item-one-ingredients" %>
-      <%= check_box_tag("ingredients[]", local.name, false, class: "flex-item-two-ingredients", id: "check_box")%>
+      <%= check_box_tag("ingredients[]", local.name, false, class: "flex-item-two-ingredients", id: "check_box") %>
   	</div>
    <% end %>
   <div class="submit-button">
