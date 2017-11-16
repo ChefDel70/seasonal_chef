@@ -91,65 +91,67 @@ ingredients = [
   "zucchini",
 ]
 
-# def get_weeks_from_period(time_period)
-# 	# time_period (string), that maps to a early or late period of a month
-# 	# returns an array of integers that converts the time_period to series
-# 	# of week numbers in a 52-week year.
-#
-# 	# data source:
-# 	# http://www.simplesteps.org/eat-local/state/
-#
-# 	case time_period
-# 	when "January, Early"
-# 		return [1, 2]
-# 	when "January, Late"
-# 		return [3, 4]
-# 	when "February, Early"
-# 		return [5, 6]
-# 	when "February, Late"
-# 		return [7, 8]
-# 	when "March, Early"
-# 		return [9, 10]
-# 	when "March, Late"
-# 		return [11, 12, 13]
-# 	when "April, Early"
-# 		return [14, 15]
-# 	when "April, Late"
-# 		return [16, 17]
-# 	when "May, Early"
-# 		return [18, 19]
-# 	when "May, Late"
-# 		return [20, 21]
-# 	when "June, Early"
-# 		return [22, 23]
-# 	when "June, Late"
-# 		return [24, 25, 26]
-# 	when "July, Early"
-# 		return [27, 28]
-# 	when "July, Late"
-# 		return [29, 30]
-# 	when "August, Early"
-# 		return [31, 32]
-# 	when "August, Late"
-# 		return [33, 34]
-# 	when "September, Early"
-# 		return [35, 36]
-# 	when "September, Late"
-# 		return [37, 38, 39]
-# 	when "October, Early"
-# 		return [40, 41]
-# 	when "October, Late"
-# 		return [42, 43]
-# 	when "November, Early"
-# 		return [44, 45]
-# 	when "November, Late"
-# 		return [46, 47, 48]
-# 	when "December, Early"
-# 		return [49, 50]
-# 	when "December, Late"
-# 		return [51, 52]
-# 	end
-# end
+
+
+def get_weeks_from_period(time_period)
+	# time_period (string), that maps to a early or late period of a month
+	# returns an array of integers that converts the time_period to series
+	# of week numbers in a 52-week year.
+
+	# data source:
+	# http://www.simplesteps.org/eat-local/state/
+
+	case time_period
+	when ["Early", "January"]
+		return [1, 2]
+	when ["Late", "January"]
+		return [3, 4]
+	when ["Early", "February"]
+		return [5, 6]
+	when ["Late", "February"]
+		return [7, 8]
+	when ["Early", "March"]
+		return [9, 10]
+	when ["Late", "March"]
+		return [11, 12, 13]
+	when ["Early", "April"]
+		return [14, 15]
+	when ["Late", "April"]
+		return [16, 17]
+	when ["Early", "May"]
+		return [18, 19]
+	when ["Late", "May"]
+		return [20, 21]
+	when ["Early", "June"]
+		return [22, 23]
+	when ["Late", "June"]
+		return [24, 25, 26]
+	when ["Early", "July"]
+		return [27, 28]
+	when ["Late", "July"]
+		return [29, 30]
+	when ["Early", "August"]
+		return [31, 32]
+	when ["Late", "August"]
+		return [33, 34]
+	when ["Early", "September"]
+		return [35, 36]
+	when ["Late", "September"]
+		return [37, 38, 39]
+	when ["Early", "October"]
+		return [40, 41]
+	when ["Late", "October"]
+		return [42, 43]
+	when ["Early", "November"]
+		return [44, 45]
+	when ["Late", "November"]
+		return [46, 47, 48]
+	when ["Early", "December"]
+		return [49, 50]
+	when ["Late", "December"]
+		return [51, 52]
+	end
+end
 
 ingredients.each do |ingredient|
   Ingredient.create(name: ingredient)
@@ -177,31 +179,31 @@ def get(path, obj)
   path.reduce(obj) { |obj, key| (obj && obj[key]) ? obj[key] : null }
 end
 
-lookup =  Hash[[
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-].product(['Early', 'Late']).map.with_index do |key, index|
-  month, period = key
-  [[period, month], index + 1]
-end]
+# lookup =  Hash[[
+#     'January',
+#     'February',
+#     'March',
+#     'April',
+#     'May',
+#     'June',
+#     'July',
+#     'August',
+#     'September',
+#     'October',
+#     'November',
+#     'December',
+# ].product(['Early', 'Late']).map.with_index do |key, index|
+#   month, period = key
+#   [[period, month], index + 1]
+# end]
 
-munged_data.slice(0, 2).each do |state|
+data.slice(0, 2).each do |state|
   paths_in_data(state, []).each do |path|
-    state_name, period_month, info_index = path
-    # state = State.find_or_create_by(name: state_name)
-    # ingredient_chk = Ingredient.find_or_create_by(name: ingredient.downcase)
-    #
-    # week_add = In_season_week.find_or_create_by(in_season_week: get_weeks_from_period)
+    state_name, period_month, get_weeks_from_period = path
+    state = State.find_or_create_by(name: state_name)
+    ingredient_chk = Ingredient.find_or_create_by(name: ingredient.downcase)
+
+    week_add = In_season_week.find_or_create_by(in_season_week: get_weeks_from_period)
     p [state_name, get(path, state), lookup[period_month]]
   end
 end
