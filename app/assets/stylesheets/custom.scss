@@ -846,7 +846,7 @@
   //////////GRIDS//////////
 
   .grids-one-recipes {
-    padding-top: 40px;
+    padding-top: 20px;
     // padding-bottom: 60px;
     text-align: center;
   }
@@ -857,7 +857,7 @@
     text-align: center;
     vertical-align: middle;
     font-size: 28pt;
-    padding-top: 125px;
+    padding-top: 100px;
   }
 
   .flex-container-recipes-one {
@@ -957,6 +957,10 @@
     padding-top: 100px;
   }
 
+  .col-sm-4.col-lg-6.recipe-image.mt-2.mb-2 {
+      text-align: right;
+  }
+
   .flex-container-recipes-one {
     padding-top: 35px!important;
   }
@@ -971,13 +975,13 @@
   a.flex-item-two-recipes {
     color: white;
     font-weight: bold;
-    font-size: 24pt;
+    font-size: 20pt;
     text-align: left;
     flex-grow: 4;
     font-family: 'Lobster', cursive !important;
     text-transform: capitalize!important;
     position: absolute;
-    top: 3%;
+    top: 5%;
   }
 
   .col-sm-8.col-lg-6.recipe-name.mt-2 {
@@ -1150,8 +1154,8 @@
     color: white;
     text-align: center;
     vertical-align: middle;
-    font-size: 28pt;
-    padding-top: 125px;
+    font-size: 48pt;
+    padding-top: 100px;
   }
 
   .flex-container-recipes-one {
