@@ -9,6 +9,7 @@
 <div class="grids-one-ingredients">
   <%= form_tag("/recipes", method: :get) do %>
   <% @ingredients.uniq.each do |local| %>
+  <%= hidden_field_tag "ingredients[]", nil %>
   	<div class="flex-container-ingredients">
       <%= label_tag local.name.capitalize, nil, class: "flex-item-one-ingredients" %>
       <%= check_box_tag("ingredients[]", local.name, false, class: "flex-item-two-ingredients", id: "check_box") %>
