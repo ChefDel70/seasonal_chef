@@ -5,6 +5,4 @@ Rails.application.routes.draw do
 	get 'recipes' => 'recipes#recipes'
 	get 'ingredients' => 'recipes#ingredients'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
-
 end
