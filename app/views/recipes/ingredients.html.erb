@@ -1,21 +1,30 @@
-<div class="container" >
-  <div class="container-header" >
-    <nav class="navbar fixed-top navbar-light bg-light">
-      <a class="navbar-brand-top">The Seasonal Chef</a>
-    </nav>
+<div class="container-header" >
+  <nav class="navbar fixed-top navbar-light bg-light">
+    <a class="navbar-brand-top">The Seasonal Chef</a>
+  </nav>
+</div>
+<div class="flex-grid-single-ingredients">
+  <div id="col-one">Please Select Up To<br>Five (5) Ingredients:</div>
+</div>
+<div class="grids-one-ingredients">
+  <%= form_tag("/recipes", method: :get) do %>
+  <% @ingredients.uniq.each do |local| %>
+  <%= hidden_field_tag "ingredients[]", nil %>
+  	<div class="flex-container-ingredients">
+      <%= label_tag local.name.capitalize, nil, class: "flex-item-one-ingredients" %>
+      <%= check_box_tag("ingredients[]", local.name, false, class: "flex-item-two-ingredients", id: "check_box") %>
+  	</div>
+   <% end %>
+  <div class="submit-button">
+    <%= submit_tag('Submit', class: "btn btn-light btn-lg") %>
   </div>
-  <div class="flex-grid-single">
-    <div id="col">Please Select Up To Five (5) Ingredients</div>
+  <% end %>
+  <div class="back-button-ingredients">
+    <%= link_to 'Back', root_path, class: "btn btn-light btn-lg"%>
   </div>
-  <div class="grids-one">
-    <%= form_tag("/recipes", method: :get) do %>
-    <% @ingredients.each do |local| %>
-    	<div class="flex-container">
-        <%= label_tag local.name, nil, class: "flex-item" %>
-        <%= check_box_tag("ingredients[]", local.name, false, class: "flex-item")%>
-    	</div>
-     <% end %>
-     	<%= submit_tag('Submit', class: "btn btn-primary btn-lg") %>
-    <% end %>
-  </div>
+</div>
+<div class="container-footer" >
+  <nav class="navbar fixed-bottom navbar-light bg-light">
+     <a class="navbar-brand-bottom">All Rights Reserved</a>
+  </nav>
 </div>
