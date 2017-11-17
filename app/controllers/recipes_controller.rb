@@ -5,6 +5,13 @@ class RecipesController < ApplicationController
 	end
 
 	def ingredients
+
+		@state = State.find(params[:state_id])
+		@ingredients = @state.ingredients.where(
+			ingredient_states: {
+				in_season_week: Time.now.strftime("%U").to_i
+			}
+		).joins(:ingredient_states).distinct
 		if params[:state_id].empty?
 			redirect_to root_path
 		else

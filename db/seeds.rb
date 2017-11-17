@@ -1,3 +1,6 @@
+require "httparty"
+require "nokogiri"
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -94,36 +97,34 @@ ingredients = [
   "watermelons"
 ]
 
+# set up seasons for ingredients
 ingredients.each do |ingredient|
   Ingredient.create(name: ingredient)
 end
 
-IngredientState.create([
-  {ingredient_id: 1, state_id: 9, in_season_begin_date: "1/8/2017 0:00", in_season_end_date: "31/10/2017 0:00"},
-  {ingredient_id: 2, state_id: 9, in_season_begin_date: "1/2/2017 0:00", in_season_end_date: "15/4/2017 0:00"},
-  {ingredient_id: 3, state_id: 9, in_season_begin_date: "1/6/2017 0:00", in_season_end_date: "31/10/2017 0:00"},
-  {ingredient_id: 4, state_id: 9, in_season_begin_date: "1/6/2017 0:00", in_season_end_date: "30/6/2017 0:00"},
-  {ingredient_id: 5, state_id: 9, in_season_begin_date: "1/4/2017 0:00", in_season_end_date: "31/5/2017 0:00"},
-  {ingredient_id: 6, state_id: 9, in_season_begin_date: "1/9/2017 0:00", in_season_end_date: "31/3/2018 0:00"},
-  {ingredient_id: 7, state_id: 9, in_season_begin_date: "1/9/2017 0:00", in_season_end_date: "31/3/2017 0:00"},
-  {ingredient_id: 8, state_id: 9, in_season_begin_date: "1/7/2017 0:00", in_season_end_date: "30/9/2017 0:00"},
-  {ingredient_id: 9, state_id: 9, in_season_begin_date: "1/6/2017 0:00", in_season_end_date: "31/7/2017 0:00"},
-  {ingredient_id: 10, state_id: 9, in_season_begin_date: "15/3/2017 0:00", in_season_end_date: "31/10/2017 0:00"},
-  {ingredient_id: 11, state_id: 9, in_season_begin_date: "1/7/2017 0:00", in_season_end_date: "30/9/2017 0:00"},
-  {ingredient_id: 13, state_id: 9, in_season_begin_date: "1/4/2017 0:00", in_season_end_date: "31/10/2017 0:00"},
-  {ingredient_id: 14, state_id: 9, in_season_begin_date: "1/4/2017 0:00", in_season_end_date: "30/6/2017 0:00"},
-  {ingredient_id: 15, state_id: 9, in_season_begin_date: "1/4/2017 0:00", in_season_end_date: "30/6/2017 0:00"},
-  {ingredient_id: 16, state_id: 9, in_season_begin_date: "1/2/2017 0:00", in_season_end_date: "31/3/2017 0:00"},
-  {ingredient_id: 17, state_id: 9, in_season_begin_date: "1/6/2017 0:00", in_season_end_date: "30/9/2017 0:00"},
-  {ingredient_id: 18, state_id: 9, in_season_begin_date: "1/5/2017 0:00", in_season_end_date: "30/6/2017 0:00"},
-  {ingredient_id: 19, state_id: 9, in_season_begin_date: "1/4/2017 0:00", in_season_end_date: "31/7/2017 0:00"},
-  {ingredient_id: 20, state_id: 9, in_season_begin_date: "15/5/2017 0:00", in_season_end_date: "30/9/2017 0:00"},
-  {ingredient_id: 21, state_id: 9, in_season_begin_date: "1/5/2017 0:00", in_season_end_date: "30/6/2017 0:00"},
-  {ingredient_id: 22, state_id: 9, in_season_begin_date: "1/9/2017 0:00", in_season_end_date: "31/10/2017 0:00"},
-  {ingredient_id: 23, state_id: 9, in_season_begin_date: "1/6/2017 0:00", in_season_end_date: "31/10/2017 0:00"},
-  {ingredient_id: 24, state_id: 9, in_season_begin_date: "1/2/2017 0:00", in_season_end_date: "30/4/2017 0:00"},
-  {ingredient_id: 24, state_id: 9, in_season_begin_date: "1/5/2017 0:00", in_season_end_date: "30/9/2017 0:00"},
-  {ingredient_id: 26, state_id: 9, in_season_begin_date: "1/9/2017 0:00", in_season_end_date: "31/10/2017 0:00"},
-  {ingredient_id: 27, state_id: 9, in_season_begin_date: "1/4/2017 0:00", in_season_end_date: "31/10/2017 0:00"},
-  {ingredient_id: 28, state_id: 9, in_season_begin_date: "1/6/2017 0:00", in_season_end_date: "31/10/2017 0:00"},
-  ])
+url = "http://www.simplesteps.org/eat-local/state/florida"
+response = HTTParty.get url
+
+weeks_for_tp = {
+  "EARLY JANUARY" => [1, 2],
+  "LATE JANUARY" => [3, 4],
+  "EARLY FEBRUARY" => [5, 6],
+  "LATE FEBRUARY" => [7, 8],
+  "EARLY MARCH" => [9, 10],
+  "LATE MARCH" => [11, 12]
+}
+
+dom = Nokogiri::HTML(response.body)
+@info = dom.css('.state-produce').map do |a|
+  p "#{a.text}"
+end
+
+# directions for scraping and seeeding
+# ------------------------------------
+# grab each "season" using '.season' selector
+# grab time period (ex: EARLY JANUARY) using h3 selector on the .season div
+# then look at its ingredients
+# compare its ingredients in here: https://imgur.com/s34yDxF to ingredients array
+# if each ingredient is in the array, then find that ingredient via .find
+# now create a ingredient_state for the said ingredient (& state) for each of the weeks_for_tp values associated with its key
+# you're done
