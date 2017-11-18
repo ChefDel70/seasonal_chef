@@ -241,6 +241,13 @@
   .navbar-brand-top {
     font-size: 58pt !important;
     font-family: 'Lobster', cursive !important;
+    color: white;
+    text-decoration: none!important;
+  }
+
+  .navbar-brand-top:hover {
+    text-decoration: none!important;
+    color: white;
   }
 
   nav.navbar.fixed-top.navbar-light.bg-light {
@@ -286,9 +293,18 @@
     font-family: 'Lobster', cursive !important;
   }
 
+  .navbar-brand-bottom:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
   nav.navbar.fixed-bottom.navbar-light.bg-light {
       justify-content: space-around;
       background-color: #000000!important;
+      color: white;
+  }
+
+  a.navbar-brand-bottom {
       color: white;
   }
 

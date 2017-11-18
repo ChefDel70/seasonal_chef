@@ -19,7 +19,7 @@
 $( document ).ready(function() {
   $('input[type=checkbox]').change(function(e){
      if ($('input[type=checkbox]:checked').length > 5) {
-          $(this).prop('checked', false)
+       $(this).prop('checked', false)
      }
   })
 });

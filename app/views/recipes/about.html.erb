@@ -1,20 +1,15 @@
 <div class="container-header" >
   <nav class="navbar fixed-top navbar-light bg-light">
-    <a class="navbar-brand-top">The Seasonal Chef</a>
+    <a class="navbar-brand-top" href="/">The Seasonal Chef</a>
   </nav>
 </div>
 <div class="container-welcome" >
-  <p>Welcome!<br>Would you like to know what local ingredients are in season?</p>
-</div>
-<div class="container-dropdown" >
-  <%= form_tag("/ingredients", method: "get") do %>
-    <%= select_tag(:state_id, options_for_select(@states.sort.map{|state| [state.name, state.id]}), prompt: "Please Select A State", onfocus: 'this.size=4;', onblur:'this.size=1;', onchange:'this.size=1; this.blur(); this.form.submit();') %>
-  <% end %>
+  <p>The Seasonal Chef is the most trusted, authoritative, and award-winning digital voice in food. Our ubiquitous, ground-breaking webapp empower food lovers everywhere.</p>
 </div>
 <div class="container-footer" >
  <nav class="navbar fixed-bottom navbar-light bg-light">
    <a class="navbar-brand-bottom" href="/about">About</a> |
    <a class="navbar-brand-bottom">All Rights Reserved</a> |
-   <a class="navbar-brand-bottom" href="/about">Contact</a>
+   <a class="navbar-brand-bottom" href="/contact">Contact</a>
  </nav>
 </div>

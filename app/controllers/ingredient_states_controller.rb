@@ -15,10 +15,4 @@ class IngredientStatesController < ApplicationController
 		all_matches = self.ingredients
 		all_matches
 	end
-
-	def about
-	end
-
-	def contact
-	end
 end
