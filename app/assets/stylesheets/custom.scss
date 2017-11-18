@@ -82,6 +82,11 @@
       color: white;
   }
 
+  .navbar-brand-bottom:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
 }
 
 // Medium devices (tablets, 768px and up)
@@ -103,6 +108,7 @@
   .navbar-brand-top {
     font-size: 52pt !important;
     font-family: 'Lobster', cursive !important;
+    color: white;
   }
 
   nav.navbar.fixed-top.navbar-light.bg-light {
@@ -154,12 +160,18 @@
   .navbar-brand-bottom {
     font-size: 32pt !important;
     font-family: 'Lobster', cursive !important;
+    color: white;
   }
 
   nav.navbar.fixed-bottom.navbar-light.bg-light {
       justify-content: space-around;
       background-color: #000000!important;
       color: white;
+  }
+
+  .navbar-brand-bottom:hover {
+    text-decoration: none!important;
+    color: white;
   }
 
 }
@@ -240,6 +252,11 @@
       color: white;
   }
 
+  .navbar-brand-bottom:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -261,6 +278,13 @@
   .navbar-brand-top {
     font-size: 48pt !important;
     font-family: 'Lobster', cursive !important;
+    color: white;
+    text-decoration: none!important;
+  }
+
+  .navbar-brand-top:hover {
+    text-decoration: none!important;
+    color: white;
   }
 
   nav.navbar.fixed-top.navbar-light.bg-light {
@@ -314,9 +338,18 @@
     font-family: 'Lobster', cursive !important;
   }
 
+  .navbar-brand-bottom:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
   nav.navbar.fixed-bottom.navbar-light.bg-light {
       justify-content: space-around;
       background-color: #000000!important;
+      color: white;
+  }
+
+  a.navbar-brand-bottom {
       color: white;
   }
 
