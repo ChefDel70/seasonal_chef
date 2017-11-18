@@ -4,8 +4,9 @@
   </nav>
 </div>
 <div class="container-welcome" >
-  <p><%= link_to 'Local Markets', 'https://www.google.com/maps/search/?q=farmers+market', class: "btn btn-light btn-lg"%></p>
   <p>Welcome!<br>Would you like to know what local ingredients are in season?</p>
+  <p id="gm"><%= link_to 'Search For Local Markets', 'https://www.google.com/maps/search/?q=farmers+market', class: "btn btn-light btn-lg", id: "gmapi", target: "_blank" %></p>
+  <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d52338.84805329764!2d-80.2226614790407!3d25.801697294468262!3m2!1i1024!2i768!4f13.1!2m1!1sfarmers+market!5e0!3m2!1sen!2sus!4v1511027195765" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 </div>
 <div class="container-dropdown" >
   <%= form_tag("/ingredients", method: "get") do %>
