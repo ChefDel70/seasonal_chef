@@ -23,6 +23,12 @@
   .navbar-brand-top {
     font-size: 28pt !important;
     font-family: 'Lobster', cursive !important;
+    color: white;
+  }
+
+  .navbar-brand-top:hover {
+    text-decoration: none!important;
+    color: white;
   }
 
   nav.navbar.fixed-top.navbar-light.bg-light {
@@ -72,8 +78,9 @@
   //////////FOOTER//////////
 
   .navbar-brand-bottom {
-    font-size: 20pt !important;
+    font-size: 16pt !important;
     font-family: 'Lobster', cursive !important;
+    color: white;
   }
 
   nav.navbar.fixed-bottom.navbar-light.bg-light {
