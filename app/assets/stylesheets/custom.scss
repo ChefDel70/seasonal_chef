@@ -118,6 +118,11 @@
     color: white;
   }
 
+  .navbar-brand-top:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
   nav.navbar.fixed-top.navbar-light.bg-light {
       justify-content: center;
       background-color: #000000!important;
@@ -200,6 +205,12 @@
   .navbar-brand-top {
     font-size: 62pt !important;
     font-family: 'Lobster', cursive !important;
+    color: white;
+  }
+
+  .navbar-brand-top:hover {
+    text-decoration: none!important;
+    color: white;
   }
 
   nav.navbar.fixed-top.navbar-light.bg-light {
@@ -251,6 +262,7 @@
   .navbar-brand-bottom {
     font-size: 36pt !important;
     font-family: 'Lobster', cursive !important;
+    color: white;
   }
 
   nav.navbar.fixed-bottom.navbar-light.bg-light {
@@ -475,7 +487,7 @@
     display: flex;
     justify-content: space-around;
     // padding-top: 7px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     font-family: 'Lobster', cursive !important;
   }
 
