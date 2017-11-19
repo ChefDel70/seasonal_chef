@@ -376,6 +376,737 @@
 
 /////////////END////////////
 
+//////////ABOUT/////////
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+
+  ////////////BODY///////////
+
+  body {
+    height: auto;
+    width: auto;
+    background-image: url("http://www.themebin.com/wp-content/uploads/hd-wallpapers/1920x1080/fall_colors_1080p.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  //////////HEADER//////////
+
+  .navbar-brand-top {
+    font-size: 28pt !important;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+  }
+
+  .navbar-brand-top:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+  nav.navbar.fixed-top.navbar-light.bg-light {
+      justify-content: center;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  //////////INFO//////////
+
+  .container-about {
+    font-size: 12pt;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 13%;
+    width: 100%;
+    // text-align: center;
+    // -webkit-text-stroke: .5px black;
+    padding-bottom: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  nav.paragraph {
+    text-indent: 10px!important;
+  }
+
+  //////////FOOTER//////////
+
+  .navbar-brand-bottom {
+    font-size: 16pt !important;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+  }
+
+  nav.navbar.fixed-bottom.navbar-light.bg-light {
+      justify-content: space-around;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  .navbar-brand-bottom:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+
+  ////////////BODY///////////
+
+  body {
+    height: auto;
+    width: auto;
+    background-image: url("http://www.themebin.com/wp-content/uploads/hd-wallpapers/1920x1080/fall_colors_1080p.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  //////////HEADER//////////
+
+  .navbar-brand-top {
+    font-size: 52pt !important;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+  }
+
+  .navbar-brand-top:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+  nav.navbar.fixed-top.navbar-light.bg-light {
+      justify-content: center;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  //////////INFO//////////
+
+  .container-about {
+    font-size: 23pt;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 15%;
+    width: 100%;
+    // text-align: center;
+    // -webkit-text-stroke: .5px black;
+    padding-bottom: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  nav.paragraph {
+    text-indent: 20px!important;
+  }
+
+  //////////FOOTER//////////
+
+  .navbar-brand-bottom {
+    font-size: 32pt !important;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+  }
+
+  nav.navbar.fixed-bottom.navbar-light.bg-light {
+      justify-content: space-around;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  .navbar-brand-bottom:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  body {
+    height: auto;
+    width: auto;
+    background-image: url("http://www.themebin.com/wp-content/uploads/hd-wallpapers/1920x1080/fall_colors_1080p.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  //////////HEADER//////////
+
+  .navbar-brand-top {
+    font-size: 62pt !important;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+  }
+
+  .navbar-brand-top:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+  nav.navbar.fixed-top.navbar-light.bg-light {
+      justify-content: center;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  //////////INFO//////////
+
+  .container-about {
+    font-size: 30pt;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 17%;
+    width: 100%;
+    // text-align: center;
+    // -webkit-text-stroke: .5px black;
+    padding-bottom: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  nav.paragraph {
+    text-indent: 50px!important;
+  }
+
+  //////////FOOTER//////////
+
+  .navbar-brand-bottom {
+    font-size: 36pt !important;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+  }
+
+  nav.navbar.fixed-bottom.navbar-light.bg-light {
+      justify-content: space-around;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  .navbar-brand-bottom:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+  ////////////BODY///////////
+
+  body {
+    height: auto;
+    width: auto;
+    background-image: url("http://www.themebin.com/wp-content/uploads/hd-wallpapers/1920x1080/fall_colors_1080p.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  //////////HEADER//////////
+
+  .navbar-brand-top {
+    font-size: 48pt !important;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+    text-decoration: none!important;
+  }
+
+  .navbar-brand-top:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+  nav.navbar.fixed-top.navbar-light.bg-light {
+      justify-content: center;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  //////////INFO//////////
+
+  .container-about {
+    font-size: 21pt;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    width: 100%;
+    // text-align: center;
+    // -webkit-text-stroke: .5px black;
+    padding-bottom: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  nav.paragraph {
+    text-indent: 30px!important;
+  }
+
+  //////////FOOTER//////////
+
+  .navbar-brand-bottom {
+    font-size: 32pt !important;
+    font-family: 'Lobster', cursive !important;
+  }
+
+  .navbar-brand-bottom:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+  nav.navbar.fixed-bottom.navbar-light.bg-light {
+      justify-content: space-around;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  a.navbar-brand-bottom {
+      color: white;
+  }
+
+}
+
+/////////////END////////////
+
+//////////CONTACT/////////
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+
+  ////////////BODY///////////
+
+  body {
+    height: auto;
+    width: auto;
+    background-image: url("http://www.themebin.com/wp-content/uploads/hd-wallpapers/1920x1080/fall_colors_1080p.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  //////////HEADER//////////
+
+  .navbar-brand-top {
+    font-size: 28pt !important;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+  }
+
+  .navbar-brand-top:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+  nav.navbar.fixed-top.navbar-light.bg-light {
+      justify-content: center;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  //////////INFO//////////
+
+  .container-contact {
+      font-size: 20pt;
+      font-family: 'Lobster', cursive !important;
+      color: white;
+      position: absolute;
+      left: 0;
+      top: 17%;
+      width: 100%;
+      text-align: center;
+      // -webkit-text-stroke: .5px black;
+      padding-bottom: 60px;
+  }
+
+  .member {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .josh img {
+    width: 150px;
+    height: 125px;
+  }
+
+  .nick img {
+    width: 150px;
+    height: 125px;
+  }
+
+  .mike img {
+    width: 150px;
+    height: 125px;
+  }
+
+  .fa.fa-facebook-official.fa {
+    color: white;
+    text-decoration: none!important;
+  }
+
+  .fa.fa-github-alt.fa {
+    color: white;
+    text-decoration: none!important;
+  }
+
+  .fa.fa-linkedin-square.fa {
+    color: white;
+    text-decoration: none!important;
+  }
+
+  //////////FOOTER//////////
+
+  .navbar-brand-bottom {
+    font-size: 16pt !important;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+  }
+
+  nav.navbar.fixed-bottom.navbar-light.bg-light {
+      justify-content: space-around;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  .navbar-brand-bottom:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+
+  ////////////BODY///////////
+
+  body {
+    height: auto;
+    width: auto;
+    background-image: url("http://www.themebin.com/wp-content/uploads/hd-wallpapers/1920x1080/fall_colors_1080p.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  //////////HEADER//////////
+
+  .navbar-brand-top {
+    font-size: 52pt !important;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+  }
+
+  .navbar-brand-top:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+  nav.navbar.fixed-top.navbar-light.bg-light {
+      justify-content: center;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  //////////INFO//////////
+
+  .container-contact {
+      font-size: 32pt;
+      font-family: 'Lobster', cursive !important;
+      color: white;
+      position: absolute;
+      left: 0;
+      top: 14%;
+      width: 100%;
+      text-align: center;
+      // -webkit-text-stroke: .5px black;
+      padding-bottom: 80px;
+  }
+
+  .member {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .josh img {
+    width: 325px;
+    height: 275px;
+  }
+
+  .nick img {
+    width: 325px;
+    height: 275px;
+  }
+
+  .mike img {
+    width: 325px;
+    height: 275px;
+  }
+
+  .fa.fa-facebook-official.fa {
+    color: white;
+    text-decoration: none!important;
+  }
+
+  .fa.fa-github-alt.fa {
+    color: white;
+    text-decoration: none!important;
+  }
+
+  .fa.fa-linkedin-square.fa {
+    color: white;
+    text-decoration: none!important;
+  }
+
+  //////////FOOTER//////////
+
+  .navbar-brand-bottom {
+    font-size: 32pt !important;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+  }
+
+  nav.navbar.fixed-bottom.navbar-light.bg-light {
+      justify-content: space-around;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  .navbar-brand-bottom:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  body {
+    height: auto;
+    width: auto;
+    background-image: url("http://www.themebin.com/wp-content/uploads/hd-wallpapers/1920x1080/fall_colors_1080p.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  //////////HEADER//////////
+
+  .navbar-brand-top {
+    font-size: 62pt !important;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+  }
+
+  .navbar-brand-top:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+  nav.navbar.fixed-top.navbar-light.bg-light {
+      justify-content: center;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  //////////INFO//////////
+
+  .container-contact {
+      font-size: 42pt;
+      font-family: 'Lobster', cursive !important;
+      color: white;
+      position: absolute;
+      left: 0;
+      top: 20%;
+      width: 100%;
+      text-align: center;
+      // -webkit-text-stroke: .5px black;
+      padding-bottom: 80px;
+  }
+
+  .member {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .josh img {
+    width: 425px;
+    height: 325px;
+  }
+
+  .nick img {
+    width: 425px;
+    height: 325px;
+  }
+
+  .mike img {
+    width: 425px;
+    height: 325px;
+  }
+
+  .fa.fa-facebook-official.fa {
+    color: white;
+    text-decoration: none!important;
+  }
+
+  .fa.fa-github-alt.fa {
+    color: white;
+    text-decoration: none!important;
+  }
+
+  .fa.fa-linkedin-square.fa {
+    color: white;
+    text-decoration: none!important;
+  }
+
+  //////////FOOTER//////////
+
+  .navbar-brand-bottom {
+    font-size: 36pt !important;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+  }
+
+  nav.navbar.fixed-bottom.navbar-light.bg-light {
+      justify-content: space-around;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  .navbar-brand-bottom:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+  ////////////BODY///////////
+
+  body {
+    height: auto;
+    width: auto;
+    background-image: url("http://www.themebin.com/wp-content/uploads/hd-wallpapers/1920x1080/fall_colors_1080p.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  //////////HEADER//////////
+
+  .navbar-brand-top {
+    font-size: 48pt !important;
+    font-family: 'Lobster', cursive !important;
+    color: white;
+    text-decoration: none!important;
+  }
+
+  .navbar-brand-top:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+  nav.navbar.fixed-top.navbar-light.bg-light {
+      justify-content: center;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  //////////INFO//////////
+
+  .container-contact {
+      font-size: 36pt;
+      font-family: 'Lobster', cursive !important;
+      color: white;
+      position: absolute;
+      left: 0;
+      top: 20%;
+      width: 100%;
+      text-align: center;
+      // -webkit-text-stroke: .5px black;
+      padding-bottom: 80px;
+  }
+
+  .member {
+    display: inline-flex;
+    flex-direction: row;
+  }
+
+  .josh img {
+    width: 375px;
+    height: 275px;
+  }
+
+  .nick img {
+    width: 375px;
+    height: 275px;
+  }
+
+  .mike img {
+    width: 375px;
+    height: 275px;
+  }
+
+  .fa.fa-facebook-official.fa {
+    color: white;
+    text-decoration: none!important;
+  }
+
+  .fa.fa-github-alt.fa {
+    color: white;
+    text-decoration: none!important;
+  }
+
+  .fa.fa-linkedin-square.fa {
+    color: white;
+    text-decoration: none!important;
+  }
+
+  //////////FOOTER//////////
+
+  .navbar-brand-bottom {
+    font-size: 32pt !important;
+    font-family: 'Lobster', cursive !important;
+  }
+
+  .navbar-brand-bottom:hover {
+    text-decoration: none!important;
+    color: white;
+  }
+
+  nav.navbar.fixed-bottom.navbar-light.bg-light {
+      justify-content: space-around;
+      background-color: #000000!important;
+      color: white;
+  }
+
+  a.navbar-brand-bottom {
+      color: white;
+  }
+
+}
+
+/////////////END////////////
+
 //////////INGREDIENTS/////////
 
 // Extra small devices (portrait phones, less than 576px)
@@ -631,6 +1362,10 @@
     font-family: 'Lobster', cursive !important;
   }
 
+  .flex-container-ingredients {
+    padding-bottom: 20px;
+  }
+
   //////////FOOTER//////////
 
   .navbar-brand-bottom {
@@ -718,7 +1453,7 @@
   }
 
   label.flex-item-one-ingredients {
-    width: 590px;
+    width: 575px;
     height: 50px;
     line-height: 50px;
     color: white!important;
@@ -773,6 +1508,10 @@
     // padding-top: 7px;
     padding-bottom: 60px;
     font-family: 'Lobster', cursive !important;
+  }
+
+  .flex-container-ingredients {
+    padding-bottom: 20px;
   }
 
   //////////FOOTER//////////
@@ -917,6 +1656,10 @@
     // padding-top: 7px;
     padding-bottom: 60px;
     font-family: 'Lobster', cursive !important;
+  }
+
+  .flex-container-ingredients {
+    padding-bottom: 20px;
   }
 
   //////////FOOTER//////////
@@ -1218,6 +1961,15 @@
     text-align: center;
   }
 
+  a#gortwo {
+    text-decoration: none;
+  }
+
+  a#gortwo:hover {
+    color: white;
+    text-decoration: none!important;
+  }
+
   .col-sm-4.recipe-image img {
       border: solid 1px white;
       height: 150px;
@@ -1286,7 +2038,7 @@
   //////////GRIDS//////////
 
   .grids-one-recipes {
-    padding-top: 90px;
+    padding-top: 50px;
     // padding-bottom: 60px;
     text-align: center;
   }
@@ -1333,6 +2085,15 @@
 
   .col-sm-8.col-lg-6.recipe-name.mt-2 {
     text-align: center;
+  }
+
+  a#gortwo {
+    text-decoration: none;
+  }
+
+  a#gortwo:hover {
+    color: white;
+    text-decoration: none!important;
   }
 
   .col-sm-4.recipe-image img {
