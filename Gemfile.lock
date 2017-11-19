@@ -69,6 +69,8 @@ GEM
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hirb (0.7.3)
+    httparty (0.15.6)
+      multi_xml (>= 0.5.2)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -88,6 +90,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.10.3)
     multi_json (1.12.2)
+    multi_xml (0.6.0)
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
@@ -125,7 +128,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (12.2.1)
+    rake (12.3.0)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -188,8 +191,10 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   hirb
+  httparty
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  nokogiri
   pg (~> 0.18)
   puma (~> 3.7)
   rails (~> 5.1.4)
